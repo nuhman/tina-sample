@@ -1,0 +1,113 @@
+{
+  "seoTitle": "Ethereal — Build Something Beautiful",
+  "hero": {
+    "badge": "Now in public beta — free for teams under 5",
+    "title": "Build something",
+    "titleHighlight": "truly ethereal.",
+    "subtitle": "The all-in-one platform for modern teams to design, collaborate, and ship beautiful digital experiences — faster than ever before.",
+    "primaryButtonText": "Start for free",
+    "secondaryButtonText": "See how it works",
+    "socialProofCount": "50,000+",
+    "socialProofSuffix": "teams around the world"
+  },
+  "stats": [
+    { "value": "50K+", "label": "Teams worldwide" },
+    { "value": "99.9%", "label": "Uptime SLA" },
+    { "value": "3.2s", "label": "Avg. time saved per task" },
+    { "value": "4.9★", "label": "Average rating" }
+  ],
+  "features": {
+    "sectionLabel": "Features",
+    "title": "Everything your team needs",
+    "subtitle": "From ideation to deployment, Ethereal gives every member of your team the tools they need to do their best work.",
+    "items": [
+      {
+        "icon": "⚡",
+        "title": "Blazing Fast",
+        "description": "Optimized for performance out of the box. Pages load in milliseconds, not seconds — giving users the snappy experience they expect."
+      },
+      {
+        "icon": "🎨",
+        "title": "Beautiful by Default",
+        "description": "Thoughtfully crafted components and layouts that look great from day one. No design degree required."
+      },
+      {
+        "icon": "🔒",
+        "title": "Secure & Reliable",
+        "description": "Enterprise-grade security baked in. Role-based access, encrypted storage, and audit logs keep your data safe."
+      },
+      {
+        "icon": "🔌",
+        "title": "Extensible",
+        "description": "A rich plugin ecosystem and open APIs let you connect Ethereal to any tool in your workflow."
+      },
+      {
+        "icon": "📊",
+        "title": "Powerful Analytics",
+        "description": "Real-time dashboards and reports give you the insight to make confident, data-driven decisions."
+      },
+      {
+        "icon": "🤝",
+        "title": "Built for Teams",
+        "description": "Collaborative workflows, shared workspaces, and live cursors make working together feel effortless."
+      }
+    ]
+  },
+  "howItWorks": {
+    "sectionLabel": "How It Works",
+    "title": "Up and running in minutes",
+    "subtitle": "No lengthy setup. No complicated onboarding. Just three simple steps to transform how your team works.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Create Your Workspace",
+        "description": "Sign up in seconds and set up your team workspace. Invite collaborators with a single click."
+      },
+      {
+        "number": "02",
+        "title": "Connect Your Tools",
+        "description": "Integrate with your favourite services — Slack, GitHub, Figma, and 50+ more — in minutes."
+      },
+      {
+        "number": "03",
+        "title": "Ship Faster",
+        "description": "Use our AI-powered workflows to automate repetitive tasks and focus on what matters most."
+      }
+    ]
+  },
+  "testimonials": {
+    "sectionLabel": "Testimonials",
+    "title": "Loved by builders everywhere",
+    "subtitle": "Don't just take our word for it — here's what teams using Ethereal have to say.",
+    "items": [
+      {
+        "quote": "Ethereal completely transformed how our team ships product. We cut release cycles from two weeks to two days. I can't imagine going back.",
+        "name": "Sarah Chen",
+        "role": "VP of Engineering at Nimbus",
+        "avatar": "SC",
+        "color": "#6d28d9"
+      },
+      {
+        "quote": "The onboarding experience was genuinely delightful. We were productive from day one — no lengthy setup, no confusing docs.",
+        "name": "Marcus Rivera",
+        "role": "Co-founder & CTO at Stackly",
+        "avatar": "MR",
+        "color": "#0891b2"
+      },
+      {
+        "quote": "Our design and engineering teams finally speak the same language. Ethereal's shared workspace is the missing piece we didn't know we needed.",
+        "name": "Aisha Patel",
+        "role": "Head of Design at Forma",
+        "avatar": "AP",
+        "color": "#059669"
+      }
+    ]
+  },
+  "cta": {
+    "sectionLabel": "Get Started Today",
+    "title": "Ready to build something ethereal?",
+    "subtitle": "Join 50,000+ teams already using Ethereal. Free to start, no credit card required.",
+    "primaryButtonText": "Start for free",
+    "secondaryButtonText": "Learn about us"
+  }
+}

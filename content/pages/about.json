@@ -1,0 +1,126 @@
+{
+  "seoTitle": "About Us — Ethereal",
+  "seoDescription": "Meet the team behind Ethereal, learn our story, and discover the values that guide everything we build.",
+  "hero": {
+    "sectionLabel": "Our Story",
+    "title": "We're on a mission to make",
+    "titleHighlight": "great software feel effortless.",
+    "subtitle": "Ethereal was born from a simple frustration: too many tools, too little flow. We set out to build one platform that unifies the entire creative and engineering workflow — and we're just getting started."
+  },
+  "story": {
+    "sectionLabel": "The Origin",
+    "title": "Built by builders, for builders.",
+    "body1": "In 2021, Elena and Jordan were engineering leads at a fast-growing startup. They watched their teams waste hours every week jumping between disconnected tools — losing context, duplicating work, and shipping slower as a result.",
+    "body2": "They left to build something better: a single, cohesive workspace where design, engineering, and product could collaborate in real time without the overhead. Two years later, over 50,000 teams around the world agree they were onto something.",
+    "buttonText": "Meet the team",
+    "cards": [
+      { "icon": "🏗️", "text": "Founded in San Francisco", "year": "2021" },
+      { "icon": "🌍", "text": "Teams in 60+ countries", "year": "2026" },
+      { "icon": "❤️", "text": "4.9★ customer satisfaction", "year": "All time" }
+    ]
+  },
+  "values": {
+    "sectionLabel": "Our Values",
+    "title": "What guides every decision we make",
+    "subtitle": "These aren't posters on a wall. They're the principles we use to decide what to build, who to hire, and how to treat our customers.",
+    "items": [
+      {
+        "icon": "🌱",
+        "title": "Start with why",
+        "description": "Every decision we make begins with understanding the purpose behind it. We build tools that genuinely solve real problems."
+      },
+      {
+        "icon": "💡",
+        "title": "Clarity over complexity",
+        "description": "Simple, well-crafted solutions beat clever complexity every time. We obsess over reducing friction for our users."
+      },
+      {
+        "icon": "🌍",
+        "title": "Open by default",
+        "description": "We believe in transparency — with our customers, our team, and in the tools we build. No hidden agendas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Move with intention",
+        "description": "We move fast, but never recklessly. Every feature ships when it's ready — not a moment sooner."
+      }
+    ]
+  },
+  "timeline": {
+    "sectionLabel": "Journey",
+    "title": "How we got here",
+    "subtitle": "Five years of building, learning, and growing — one milestone at a time.",
+    "milestones": [
+      { "year": "2021", "event": "Founded", "detail": "Elena and Jordan quit their jobs to build the tools they always wished existed." },
+      { "year": "2022", "event": "Seed Round", "detail": "Raised $4M to grow the team and launch a private beta with 200 design partners." },
+      { "year": "2023", "event": "Public Launch", "detail": "Opened to the world. 10,000 teams signed up in the first month." },
+      { "year": "2024", "event": "Series A", "detail": "Raised $22M. Expanded to Europe and APAC. Hit 25,000 paying teams." },
+      { "year": "2025", "event": "AI Platform", "detail": "Launched AI-powered workflows. Named a Top 10 Product of the Year by Product Hunt." },
+      { "year": "2026", "event": "Now", "detail": "50,000+ teams worldwide. Still day one in our minds." }
+    ]
+  },
+  "team": {
+    "sectionLabel": "The Team",
+    "title": "The humans behind Ethereal",
+    "subtitle": "A small, exceptional team with a big ambition. We hire for craft, curiosity, and kindness — in equal measure.",
+    "members": [
+      {
+        "name": "Elena Vasquez",
+        "role": "CEO & Co-founder",
+        "bio": "Previously led product at two unicorn startups. Passionate about tools that empower creators.",
+        "initials": "EV",
+        "color": "#6d28d9"
+      },
+      {
+        "name": "Jordan Kim",
+        "role": "CTO & Co-founder",
+        "bio": "Ex-Google engineer. Built distributed systems for 10+ years before starting Ethereal.",
+        "initials": "JK",
+        "color": "#0891b2"
+      },
+      {
+        "name": "Priya Sharma",
+        "role": "Head of Design",
+        "bio": "Award-winning product designer with a love for systems thinking and accessible interfaces.",
+        "initials": "PS",
+        "color": "#d97706"
+      },
+      {
+        "name": "Tomás Herrera",
+        "role": "Head of Engineering",
+        "bio": "Open-source contributor and conference speaker. Believes great DX is the foundation of great products.",
+        "initials": "TH",
+        "color": "#059669"
+      },
+      {
+        "name": "Mei Lin",
+        "role": "Head of Growth",
+        "bio": "Data-driven marketer who helped scale two B2B SaaS products from 0 to Series B.",
+        "initials": "ML",
+        "color": "#dc2626"
+      },
+      {
+        "name": "Finn Larsen",
+        "role": "Head of Customer Success",
+        "bio": "Customer champion who turned support into one of Ethereal's strongest growth levers.",
+        "initials": "FL",
+        "color": "#7c3aed"
+      }
+    ]
+  },
+  "join": {
+    "sectionLabel": "We're Hiring",
+    "title": "Want to help build Ethereal?",
+    "subtitle": "We're a remote-first team that values autonomy, craft, and genuine curiosity. Check out our open roles.",
+    "primaryButtonText": "View Open Roles",
+    "secondaryButtonText": "Back to Home",
+    "perks": [
+      { "icon": "🌐", "perk": "Fully remote" },
+      { "icon": "💰", "perk": "Competitive salary & equity" },
+      { "icon": "🏖️", "perk": "Unlimited PTO" },
+      { "icon": "📚", "perk": "$2K learning budget / year" },
+      { "icon": "💻", "perk": "Top-of-the-line equipment" },
+      { "icon": "🤝", "perk": "Inclusive, kind culture" }
+    ]
+  }
+}

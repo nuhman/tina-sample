@@ -1,101 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import aboutData from '../../content/pages/about.json';
 
-const values = [
-  {
-    icon: '🌱',
-    title: 'Start with why',
-    description: 'Every decision we make begins with understanding the purpose behind it. We build tools that genuinely solve real problems.',
-  },
-  {
-    icon: '💡',
-    title: 'Clarity over complexity',
-    description: 'Simple, well-crafted solutions beat clever complexity every time. We obsess over reducing friction for our users.',
-  },
-  {
-    icon: '🌍',
-    title: 'Open by default',
-    description: 'We believe in transparency — with our customers, our team, and in the tools we build. No hidden agendas.',
-  },
-  {
-    icon: '🚀',
-    title: 'Move with intention',
-    description: 'We move fast, but never recklessly. Every feature ships when it\'s ready — not a moment sooner.',
-  },
-];
-
-const team = [
-  {
-    name: 'Elena Vasquez',
-    role: 'CEO & Co-founder',
-    bio: 'Previously led product at two unicorn startups. Passionate about tools that empower creators.',
-    initials: 'EV',
-    color: '#6d28d9',
-  },
-  {
-    name: 'Jordan Kim',
-    role: 'CTO & Co-founder',
-    bio: 'Ex-Google engineer. Built distributed systems for 10+ years before starting Ethereal.',
-    initials: 'JK',
-    color: '#0891b2',
-  },
-  {
-    name: 'Priya Sharma',
-    role: 'Head of Design',
-    bio: 'Award-winning product designer with a love for systems thinking and accessible interfaces.',
-    initials: 'PS',
-    color: '#d97706',
-  },
-  {
-    name: 'Tomás Herrera',
-    role: 'Head of Engineering',
-    bio: 'Open-source contributor and conference speaker. Believes great DX is the foundation of great products.',
-    initials: 'TH',
-    color: '#059669',
-  },
-  {
-    name: 'Mei Lin',
-    role: 'Head of Growth',
-    bio: 'Data-driven marketer who helped scale two B2B SaaS products from 0 to Series B.',
-    initials: 'ML',
-    color: '#dc2626',
-  },
-  {
-    name: 'Finn Larsen',
-    role: 'Head of Customer Success',
-    bio: 'Customer champion who turned support into one of Ethereal\'s strongest growth levers.',
-    initials: 'FL',
-    color: '#7c3aed',
-  },
-];
-
-const milestones = [
-  { year: '2021', event: 'Founded', detail: 'Elena and Jordan quit their jobs to build the tools they always wished existed.' },
-  { year: '2022', event: 'Seed Round', detail: 'Raised $4M to grow the team and launch a private beta with 200 design partners.' },
-  { year: '2023', event: 'Public Launch', detail: 'Opened to the world. 10,000 teams signed up in the first month.' },
-  { year: '2024', event: 'Series A', detail: 'Raised $22M. Expanded to Europe and APAC. Hit 25,000 paying teams.' },
-  { year: '2025', event: 'AI Platform', detail: 'Launched AI-powered workflows. Named a Top 10 Product of the Year by Product Hunt.' },
-  { year: '2026', event: 'Now', detail: '50,000+ teams worldwide. Still day one in our minds.' },
-];
+const { seoTitle, seoDescription, hero, story, values, timeline, team, join } = aboutData;
 ---
 
-<Layout
-  title="About Us — Ethereal"
-  description="Meet the team behind Ethereal, learn our story, and discover the values that guide everything we build."
->
+<Layout title={seoTitle} description={seoDescription}>
   <!-- Hero -->
   <section class="about-hero">
     <div class="about-hero-glow"></div>
     <div class="container about-hero-inner">
-      <span class="section-label">Our Story</span>
+      <span class="section-label">{hero.sectionLabel}</span>
       <h1 class="about-hero-title">
-        We're on a mission to make<br />
-        <span class="hero-gradient">great software feel effortless.</span>
+        {hero.title}<br />
+        <span class="hero-gradient">{hero.titleHighlight}</span>
       </h1>
       <p class="about-hero-subtitle">
-        Ethereal was born from a simple frustration: too many tools,
-        too little flow. We set out to build one platform that unifies
-        the entire creative and engineering workflow — and we're just getting started.
+        {hero.subtitle}
       </p>
     </div>
   </section>
@@ -104,38 +25,21 @@ const milestones = [
   <section class="section story-section">
     <div class="container story-grid">
       <div class="story-text">
-        <span class="section-label">The Origin</span>
-        <h2 class="section-title">Built by builders, for builders.</h2>
-        <p class="story-body">
-          In 2021, Elena and Jordan were engineering leads at a fast-growing startup.
-          They watched their teams waste hours every week jumping between disconnected
-          tools — losing context, duplicating work, and shipping slower as a result.
-        </p>
-        <p class="story-body">
-          They left to build something better: a single, cohesive workspace where
-          design, engineering, and product could collaborate in real time without
-          the overhead. Two years later, over 50,000 teams around the world agree
-          they were onto something.
-        </p>
-        <a href="#team" class="btn btn-primary" style="margin-top: 8px;">Meet the team</a>
+        <span class="section-label">{story.sectionLabel}</span>
+        <h2 class="section-title">{story.title}</h2>
+        <p class="story-body">{story.body1}</p>
+        <p class="story-body">{story.body2}</p>
+        <a href="#team" class="btn btn-primary" style="margin-top: 8px;">{story.buttonText}</a>
       </div>
       <div class="story-visual">
         <div class="story-card-stack">
-          <div class="story-card card-1">
-            <span class="story-card-icon">🏗️</span>
-            <p>Founded in San Francisco</p>
-            <small>2021</small>
-          </div>
-          <div class="story-card card-2">
-            <span class="story-card-icon">🌍</span>
-            <p>Teams in 60+ countries</p>
-            <small>2026</small>
-          </div>
-          <div class="story-card card-3">
-            <span class="story-card-icon">❤️</span>
-            <p>4.9★ customer satisfaction</p>
-            <small>All time</small>
-          </div>
+          {story.cards.map((card, i) => (
+            <div class:list={['story-card', `card-${i + 1}`]}>
+              <span class="story-card-icon">{card.icon}</span>
+              <p>{card.text}</p>
+              <small>{card.year}</small>
+            </div>
+          ))}
         </div>
       </div>
     </div>
@@ -145,15 +49,12 @@ const milestones = [
   <section class="section values-section">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-label">Our Values</span>
-        <h2 class="section-title">What guides every decision we make</h2>
-        <p class="section-subtitle">
-          These aren't posters on a wall. They're the principles we use to decide
-          what to build, who to hire, and how to treat our customers.
-        </p>
+        <span class="section-label">{values.sectionLabel}</span>
+        <h2 class="section-title">{values.title}</h2>
+        <p class="section-subtitle">{values.subtitle}</p>
       </div>
       <div class="values-grid">
-        {values.map((value) => (
+        {values.items.map((value) => (
           <div class="value-card">
             <div class="value-icon">{value.icon}</div>
             <h3 class="value-title">{value.title}</h3>
@@ -168,14 +69,12 @@ const milestones = [
   <section class="section timeline-section">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-label">Journey</span>
-        <h2 class="section-title">How we got here</h2>
-        <p class="section-subtitle">
-          Five years of building, learning, and growing — one milestone at a time.
-        </p>
+        <span class="section-label">{timeline.sectionLabel}</span>
+        <h2 class="section-title">{timeline.title}</h2>
+        <p class="section-subtitle">{timeline.subtitle}</p>
       </div>
       <div class="timeline">
-        {milestones.map((m, i) => (
+        {timeline.milestones.map((m, i) => (
           <div class:list={['timeline-item', { right: i % 2 !== 0 }]}>
             <div class="timeline-content">
               <span class="timeline-year">{m.year}</span>
@@ -194,15 +93,12 @@ const milestones = [
   <section class="section team-section" id="team">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-label">The Team</span>
-        <h2 class="section-title">The humans behind Ethereal</h2>
-        <p class="section-subtitle">
-          A small, exceptional team with a big ambition. We hire for craft,
-          curiosity, and kindness — in equal measure.
-        </p>
+        <span class="section-label">{team.sectionLabel}</span>
+        <h2 class="section-title">{team.title}</h2>
+        <p class="section-subtitle">{team.subtitle}</p>
       </div>
       <div class="team-grid">
-        {team.map((member) => (
+        {team.members.map((member) => (
           <div class="team-card">
             <div class="team-avatar" style={`background: linear-gradient(135deg, ${member.color}cc, ${member.color})`}>
               {member.initials}
@@ -223,26 +119,16 @@ const milestones = [
     <div class="container">
       <div class="join-inner">
         <div class="join-text">
-          <span class="section-label">We're Hiring</span>
-          <h2 class="section-title" style="margin-bottom: 12px;">Want to help build Ethereal?</h2>
-          <p class="section-subtitle">
-            We're a remote-first team that values autonomy, craft, and genuine
-            curiosity. Check out our open roles.
-          </p>
+          <span class="section-label">{join.sectionLabel}</span>
+          <h2 class="section-title" style="margin-bottom: 12px;">{join.title}</h2>
+          <p class="section-subtitle">{join.subtitle}</p>
           <div class="join-actions">
-            <a href="#" class="btn btn-primary btn-lg">View Open Roles</a>
-            <a href="/" class="btn btn-outline btn-lg">Back to Home</a>
+            <a href="#" class="btn btn-primary btn-lg">{join.primaryButtonText}</a>
+            <a href="/" class="btn btn-outline btn-lg">{join.secondaryButtonText}</a>
           </div>
         </div>
         <div class="join-perks">
-          {[
-            { icon: '🌐', perk: 'Fully remote' },
-            { icon: '💰', perk: 'Competitive salary & equity' },
-            { icon: '🏖️', perk: 'Unlimited PTO' },
-            { icon: '📚', perk: '$2K learning budget / year' },
-            { icon: '💻', perk: 'Top-of-the-line equipment' },
-            { icon: '🤝', perk: 'Inclusive, kind culture' },
-          ].map((p) => (
+          {join.perks.map((p) => (
             <div class="perk-item">
               <span class="perk-icon">{p.icon}</span>
               <span class="perk-label">{p.perk}</span>

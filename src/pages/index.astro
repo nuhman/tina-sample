@@ -1,112 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import homeData from '../../content/pages/home.json';
 
-const features = [
-  {
-    icon: '⚡',
-    title: 'Blazing Fast',
-    description: 'Optimized for performance out of the box. Pages load in milliseconds, not seconds — giving users the snappy experience they expect.',
-  },
-  {
-    icon: '🎨',
-    title: 'Beautiful by Default',
-    description: 'Thoughtfully crafted components and layouts that look great from day one. No design degree required.',
-  },
-  {
-    icon: '🔒',
-    title: 'Secure & Reliable',
-    description: 'Enterprise-grade security baked in. Role-based access, encrypted storage, and audit logs keep your data safe.',
-  },
-  {
-    icon: '🔌',
-    title: 'Extensible',
-    description: 'A rich plugin ecosystem and open APIs let you connect Ethereal to any tool in your workflow.',
-  },
-  {
-    icon: '📊',
-    title: 'Powerful Analytics',
-    description: 'Real-time dashboards and reports give you the insight to make confident, data-driven decisions.',
-  },
-  {
-    icon: '🤝',
-    title: 'Built for Teams',
-    description: 'Collaborative workflows, shared workspaces, and live cursors make working together feel effortless.',
-  },
-];
-
-const steps = [
-  {
-    number: '01',
-    title: 'Create Your Workspace',
-    description: 'Sign up in seconds and set up your team workspace. Invite collaborators with a single click.',
-  },
-  {
-    number: '02',
-    title: 'Connect Your Tools',
-    description: 'Integrate with your favourite services — Slack, GitHub, Figma, and 50+ more — in minutes.',
-  },
-  {
-    number: '03',
-    title: 'Ship Faster',
-    description: 'Use our AI-powered workflows to automate repetitive tasks and focus on what matters most.',
-  },
-];
-
-const testimonials = [
-  {
-    quote: "Ethereal completely transformed how our team ships product. We cut release cycles from two weeks to two days. I can't imagine going back.",
-    name: 'Sarah Chen',
-    role: 'VP of Engineering at Nimbus',
-    avatar: 'SC',
-    color: '#6d28d9',
-  },
-  {
-    quote: "The onboarding experience was genuinely delightful. We were productive from day one — no lengthy setup, no confusing docs.",
-    name: 'Marcus Rivera',
-    role: 'Co-founder & CTO at Stackly',
-    avatar: 'MR',
-    color: '#0891b2',
-  },
-  {
-    quote: "Our design and engineering teams finally speak the same language. Ethereal's shared workspace is the missing piece we didn't know we needed.",
-    name: 'Aisha Patel',
-    role: 'Head of Design at Forma',
-    avatar: 'AP',
-    color: '#059669',
-  },
-];
-
-const stats = [
-  { value: '50K+', label: 'Teams worldwide' },
-  { value: '99.9%', label: 'Uptime SLA' },
-  { value: '3.2s', label: 'Avg. time saved per task' },
-  { value: '4.9★', label: 'Average rating' },
-];
+const { seoTitle, hero, stats, features, howItWorks, testimonials, cta } = homeData;
 ---
 
-<Layout title="Ethereal — Build Something Beautiful">
+<Layout title={seoTitle}>
   <!-- Hero -->
   <section class="hero">
     <div class="hero-bg-glow"></div>
     <div class="container hero-inner">
       <div class="hero-badge">
         <span class="badge-dot"></span>
-        Now in public beta — free for teams under 5
+        {hero.badge}
       </div>
       <h1 class="hero-title">
-        Build something<br />
-        <span class="hero-gradient">truly ethereal.</span>
+        {hero.title}<br />
+        <span class="hero-gradient">{hero.titleHighlight}</span>
       </h1>
       <p class="hero-subtitle">
-        The all-in-one platform for modern teams to design, collaborate, and ship
-        beautiful digital experiences — faster than ever before.
+        {hero.subtitle}
       </p>
       <div class="hero-actions">
         <a href="#" class="btn btn-primary btn-lg">
-          Start for free
+          {hero.primaryButtonText}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+        <a href="#how-it-works" class="btn btn-outline btn-lg">{hero.secondaryButtonText}</a>
       </div>
       <div class="hero-social-proof">
         <div class="avatar-stack">
@@ -115,7 +35,7 @@ const stats = [
           ))}
         </div>
         <p class="social-proof-text">
-          Trusted by <strong>50,000+</strong> teams around the world
+          Trusted by <strong>{hero.socialProofCount}</strong> {hero.socialProofSuffix}
         </p>
       </div>
     </div>
@@ -167,15 +87,12 @@ const stats = [
   <section class="section features-section" id="features">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-label">Features</span>
-        <h2 class="section-title">Everything your team needs</h2>
-        <p class="section-subtitle">
-          From ideation to deployment, Ethereal gives every member of your team
-          the tools they need to do their best work.
-        </p>
+        <span class="section-label">{features.sectionLabel}</span>
+        <h2 class="section-title">{features.title}</h2>
+        <p class="section-subtitle">{features.subtitle}</p>
       </div>
       <div class="features-grid">
-        {features.map((feature) => (
+        {features.items.map((feature) => (
           <div class="feature-card">
             <div class="feature-icon">{feature.icon}</div>
             <h3 class="feature-title">{feature.title}</h3>
@@ -190,18 +107,15 @@ const stats = [
   <section class="section how-section" id="how-it-works">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-label">How It Works</span>
-        <h2 class="section-title">Up and running in minutes</h2>
-        <p class="section-subtitle">
-          No lengthy setup. No complicated onboarding. Just three simple steps
-          to transform how your team works.
-        </p>
+        <span class="section-label">{howItWorks.sectionLabel}</span>
+        <h2 class="section-title">{howItWorks.title}</h2>
+        <p class="section-subtitle">{howItWorks.subtitle}</p>
       </div>
       <div class="steps-grid">
-        {steps.map((step, i) => (
+        {howItWorks.steps.map((step, i) => (
           <div class="step-card">
             <span class="step-number">{step.number}</span>
-            {i < steps.length - 1 && <span class="step-connector"></span>}
+            {i < howItWorks.steps.length - 1 && <span class="step-connector"></span>}
             <h3 class="step-title">{step.title}</h3>
             <p class="step-description">{step.description}</p>
           </div>
@@ -214,15 +128,12 @@ const stats = [
   <section class="section testimonials-section" id="testimonials">
     <div class="container">
       <div class="section-header centered">
-        <span class="section-label">Testimonials</span>
-        <h2 class="section-title">Loved by builders everywhere</h2>
-        <p class="section-subtitle">
-          Don't just take our word for it — here's what teams using Ethereal
-          have to say.
-        </p>
+        <span class="section-label">{testimonials.sectionLabel}</span>
+        <h2 class="section-title">{testimonials.title}</h2>
+        <p class="section-subtitle">{testimonials.subtitle}</p>
       </div>
       <div class="testimonials-grid">
-        {testimonials.map((t) => (
+        {testimonials.items.map((t) => (
           <div class="testimonial-card">
             <div class="quote-mark">"</div>
             <p class="testimonial-quote">{t.quote}</p>
@@ -246,18 +157,16 @@ const stats = [
     <div class="container">
       <div class="cta-inner">
         <div class="cta-glow"></div>
-        <span class="section-label">Get Started Today</span>
-        <h2 class="cta-title">Ready to build something ethereal?</h2>
-        <p class="cta-subtitle">
-          Join 50,000+ teams already using Ethereal. Free to start, no credit card required.
-        </p>
+        <span class="section-label">{cta.sectionLabel}</span>
+        <h2 class="cta-title">{cta.title}</h2>
+        <p class="cta-subtitle">{cta.subtitle}</p>
         <div class="cta-actions">
           <a href="#" class="btn btn-primary btn-lg">
-            Start for free
+            {cta.primaryButtonText}
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="/aboutus" class="btn btn-outline btn-lg" style="border-color: rgba(255,255,255,0.3); color: #fff;">
-            Learn about us
+            {cta.secondaryButtonText}
           </a>
         </div>
       </div>
