@@ -1,0 +1,682 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const values = [
+  {
+    icon: '🌱',
+    title: 'Start with why',
+    description: 'Every decision we make begins with understanding the purpose behind it. We build tools that genuinely solve real problems.',
+  },
+  {
+    icon: '💡',
+    title: 'Clarity over complexity',
+    description: 'Simple, well-crafted solutions beat clever complexity every time. We obsess over reducing friction for our users.',
+  },
+  {
+    icon: '🌍',
+    title: 'Open by default',
+    description: 'We believe in transparency — with our customers, our team, and in the tools we build. No hidden agendas.',
+  },
+  {
+    icon: '🚀',
+    title: 'Move with intention',
+    description: 'We move fast, but never recklessly. Every feature ships when it\'s ready — not a moment sooner.',
+  },
+];
+
+const team = [
+  {
+    name: 'Elena Vasquez',
+    role: 'CEO & Co-founder',
+    bio: 'Previously led product at two unicorn startups. Passionate about tools that empower creators.',
+    initials: 'EV',
+    color: '#6d28d9',
+  },
+  {
+    name: 'Jordan Kim',
+    role: 'CTO & Co-founder',
+    bio: 'Ex-Google engineer. Built distributed systems for 10+ years before starting Ethereal.',
+    initials: 'JK',
+    color: '#0891b2',
+  },
+  {
+    name: 'Priya Sharma',
+    role: 'Head of Design',
+    bio: 'Award-winning product designer with a love for systems thinking and accessible interfaces.',
+    initials: 'PS',
+    color: '#d97706',
+  },
+  {
+    name: 'Tomás Herrera',
+    role: 'Head of Engineering',
+    bio: 'Open-source contributor and conference speaker. Believes great DX is the foundation of great products.',
+    initials: 'TH',
+    color: '#059669',
+  },
+  {
+    name: 'Mei Lin',
+    role: 'Head of Growth',
+    bio: 'Data-driven marketer who helped scale two B2B SaaS products from 0 to Series B.',
+    initials: 'ML',
+    color: '#dc2626',
+  },
+  {
+    name: 'Finn Larsen',
+    role: 'Head of Customer Success',
+    bio: 'Customer champion who turned support into one of Ethereal\'s strongest growth levers.',
+    initials: 'FL',
+    color: '#7c3aed',
+  },
+];
+
+const milestones = [
+  { year: '2021', event: 'Founded', detail: 'Elena and Jordan quit their jobs to build the tools they always wished existed.' },
+  { year: '2022', event: 'Seed Round', detail: 'Raised $4M to grow the team and launch a private beta with 200 design partners.' },
+  { year: '2023', event: 'Public Launch', detail: 'Opened to the world. 10,000 teams signed up in the first month.' },
+  { year: '2024', event: 'Series A', detail: 'Raised $22M. Expanded to Europe and APAC. Hit 25,000 paying teams.' },
+  { year: '2025', event: 'AI Platform', detail: 'Launched AI-powered workflows. Named a Top 10 Product of the Year by Product Hunt.' },
+  { year: '2026', event: 'Now', detail: '50,000+ teams worldwide. Still day one in our minds.' },
+];
+---
+
+<Layout
+  title="About Us — Ethereal"
+  description="Meet the team behind Ethereal, learn our story, and discover the values that guide everything we build."
+>
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero-glow"></div>
+    <div class="container about-hero-inner">
+      <span class="section-label">Our Story</span>
+      <h1 class="about-hero-title">
+        We're on a mission to make<br />
+        <span class="hero-gradient">great software feel effortless.</span>
+      </h1>
+      <p class="about-hero-subtitle">
+        Ethereal was born from a simple frustration: too many tools,
+        too little flow. We set out to build one platform that unifies
+        the entire creative and engineering workflow — and we're just getting started.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro / Story -->
+  <section class="section story-section">
+    <div class="container story-grid">
+      <div class="story-text">
+        <span class="section-label">The Origin</span>
+        <h2 class="section-title">Built by builders, for builders.</h2>
+        <p class="story-body">
+          In 2021, Elena and Jordan were engineering leads at a fast-growing startup.
+          They watched their teams waste hours every week jumping between disconnected
+          tools — losing context, duplicating work, and shipping slower as a result.
+        </p>
+        <p class="story-body">
+          They left to build something better: a single, cohesive workspace where
+          design, engineering, and product could collaborate in real time without
+          the overhead. Two years later, over 50,000 teams around the world agree
+          they were onto something.
+        </p>
+        <a href="#team" class="btn btn-primary" style="margin-top: 8px;">Meet the team</a>
+      </div>
+      <div class="story-visual">
+        <div class="story-card-stack">
+          <div class="story-card card-1">
+            <span class="story-card-icon">🏗️</span>
+            <p>Founded in San Francisco</p>
+            <small>2021</small>
+          </div>
+          <div class="story-card card-2">
+            <span class="story-card-icon">🌍</span>
+            <p>Teams in 60+ countries</p>
+            <small>2026</small>
+          </div>
+          <div class="story-card card-3">
+            <span class="story-card-icon">❤️</span>
+            <p>4.9★ customer satisfaction</p>
+            <small>All time</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section values-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-label">Our Values</span>
+        <h2 class="section-title">What guides every decision we make</h2>
+        <p class="section-subtitle">
+          These aren't posters on a wall. They're the principles we use to decide
+          what to build, who to hire, and how to treat our customers.
+        </p>
+      </div>
+      <div class="values-grid">
+        {values.map((value) => (
+          <div class="value-card">
+            <div class="value-icon">{value.icon}</div>
+            <h3 class="value-title">{value.title}</h3>
+            <p class="value-description">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section timeline-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-label">Journey</span>
+        <h2 class="section-title">How we got here</h2>
+        <p class="section-subtitle">
+          Five years of building, learning, and growing — one milestone at a time.
+        </p>
+      </div>
+      <div class="timeline">
+        {milestones.map((m, i) => (
+          <div class:list={['timeline-item', { right: i % 2 !== 0 }]}>
+            <div class="timeline-content">
+              <span class="timeline-year">{m.year}</span>
+              <h3 class="timeline-event">{m.event}</h3>
+              <p class="timeline-detail">{m.detail}</p>
+            </div>
+            <div class="timeline-dot"></div>
+          </div>
+        ))}
+        <div class="timeline-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section team-section" id="team">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-label">The Team</span>
+        <h2 class="section-title">The humans behind Ethereal</h2>
+        <p class="section-subtitle">
+          A small, exceptional team with a big ambition. We hire for craft,
+          curiosity, and kindness — in equal measure.
+        </p>
+      </div>
+      <div class="team-grid">
+        {team.map((member) => (
+          <div class="team-card">
+            <div class="team-avatar" style={`background: linear-gradient(135deg, ${member.color}cc, ${member.color})`}>
+              {member.initials}
+            </div>
+            <div class="team-info">
+              <h3 class="team-name">{member.name}</h3>
+              <span class="team-role">{member.role}</span>
+              <p class="team-bio">{member.bio}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Join CTA -->
+  <section class="section join-section">
+    <div class="container">
+      <div class="join-inner">
+        <div class="join-text">
+          <span class="section-label">We're Hiring</span>
+          <h2 class="section-title" style="margin-bottom: 12px;">Want to help build Ethereal?</h2>
+          <p class="section-subtitle">
+            We're a remote-first team that values autonomy, craft, and genuine
+            curiosity. Check out our open roles.
+          </p>
+          <div class="join-actions">
+            <a href="#" class="btn btn-primary btn-lg">View Open Roles</a>
+            <a href="/" class="btn btn-outline btn-lg">Back to Home</a>
+          </div>
+        </div>
+        <div class="join-perks">
+          {[
+            { icon: '🌐', perk: 'Fully remote' },
+            { icon: '💰', perk: 'Competitive salary & equity' },
+            { icon: '🏖️', perk: 'Unlimited PTO' },
+            { icon: '📚', perk: '$2K learning budget / year' },
+            { icon: '💻', perk: 'Top-of-the-line equipment' },
+            { icon: '🤝', perk: 'Inclusive, kind culture' },
+          ].map((p) => (
+            <div class="perk-item">
+              <span class="perk-icon">{p.icon}</span>
+              <span class="perk-label">{p.perk}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ── About Hero ── */
+  .about-hero {
+    position: relative;
+    background: linear-gradient(170deg, #faf9ff 0%, #f0ecff 60%, #faf9ff 100%);
+    padding-top: 96px;
+    padding-bottom: 80px;
+    overflow: hidden;
+  }
+
+  .about-hero-glow {
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    width: 700px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(109,40,217,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .about-hero-inner {
+    position: relative;
+    max-width: 800px;
+  }
+
+  .about-hero-title {
+    font-size: clamp(2.25rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #a78bfa 50%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    max-width: 620px;
+    line-height: 1.7;
+  }
+
+  /* ── Story ── */
+  .story-section {
+    background: var(--color-bg);
+  }
+
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .story-body {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .story-visual {
+    position: relative;
+    height: 320px;
+  }
+
+  .story-card-stack {
+    position: relative;
+    height: 100%;
+  }
+
+  .story-card {
+    position: absolute;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 220px;
+  }
+
+  .story-card p {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-text);
+  }
+
+  .story-card small {
+    font-size: 0.8rem;
+    color: var(--color-text-subtle);
+  }
+
+  .story-card-icon {
+    font-size: 1.5rem;
+  }
+
+  .card-1 {
+    top: 0;
+    left: 0;
+    transform: rotate(-2deg);
+    z-index: 3;
+  }
+
+  .card-2 {
+    top: 80px;
+    left: 60px;
+    transform: rotate(1.5deg);
+    z-index: 2;
+    border-color: rgba(109,40,217,0.2);
+  }
+
+  .card-3 {
+    top: 175px;
+    left: 20px;
+    transform: rotate(-1deg);
+    z-index: 1;
+  }
+
+  /* ── Values ── */
+  .values-section {
+    background: var(--color-bg-subtle);
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .value-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+
+  .value-card:hover {
+    border-color: rgba(109,40,217,0.25);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .value-icon {
+    font-size: 1.75rem;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+
+  .value-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+
+  .value-description {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── Timeline ── */
+  .timeline-section {
+    background: var(--color-bg);
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 820px;
+    margin-inline: auto;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--color-primary) 10%, var(--color-primary-light) 90%, transparent);
+    opacity: 0.2;
+  }
+
+  .timeline-item {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: calc(50% + 40px);
+    padding-bottom: 40px;
+    position: relative;
+  }
+
+  .timeline-item.right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: calc(50% + 40px);
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px rgba(109,40,217,0.2);
+    z-index: 1;
+  }
+
+  .timeline-content {
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    max-width: 320px;
+  }
+
+  .timeline-year {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .timeline-event {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 6px;
+  }
+
+  .timeline-detail {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  /* ── Team ── */
+  .team-section {
+    background: var(--color-bg-subtle);
+  }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .team-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+  }
+
+  .team-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .team-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .team-role {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .team-bio {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+  }
+
+  /* ── Join ── */
+  .join-section {
+    background: var(--color-bg);
+  }
+
+  .join-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .join-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  .join-perks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .perk-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    transition: border-color 0.15s;
+  }
+
+  .perk-item:hover {
+    border-color: rgba(109,40,217,0.25);
+  }
+
+  .perk-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .perk-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .story-grid,
+    .join-inner {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .story-visual {
+      height: 260px;
+    }
+
+    .timeline-item {
+      padding-right: 0;
+      padding-left: 40px;
+      justify-content: flex-start;
+    }
+
+    .timeline-item.right {
+      padding-left: 40px;
+    }
+
+    .timeline-line {
+      left: 6px;
+    }
+
+    .timeline-dot {
+      left: 6px;
+    }
+
+    .timeline-content {
+      max-width: 100%;
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .join-perks {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
