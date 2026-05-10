@@ -3,18 +3,30 @@
   "hero": {
     "badge": "Now in public beta — free for teams under 5",
     "title": "Build something",
-    "titleHighlight": "truly ethereal.",
-    "subtitle": "The all-in-one platform for modern teams to design, collaborate, and ship beautiful digital experiences — faster than ever before.",
-    "primaryButtonText": "Start for free",
+    "titleHighlight": "really ethereal.",
+    "subtitle": "The complete platform for modern teams to design, collaborate, and ship beautiful digital experiences — faster than ever before.",
+    "primaryButtonText": "Start for free!",
     "secondaryButtonText": "See how it works",
-    "socialProofCount": "50,000+",
+    "socialProofCount": "100,000+",
     "socialProofSuffix": "teams around the world"
   },
   "stats": [
-    { "value": "50K+", "label": "Teams worldwide" },
-    { "value": "99.9%", "label": "Uptime SLA" },
-    { "value": "3.2s", "label": "Avg. time saved per task" },
-    { "value": "4.9★", "label": "Average rating" }
+    {
+      "value": "50K+",
+      "label": "Teams worldwide"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime SLA"
+    },
+    {
+      "value": "3.2s",
+      "label": "Avg. time saved per task"
+    },
+    {
+      "value": "4.9★",
+      "label": "Average rating"
+    }
   ],
   "features": {
     "sectionLabel": "Features",
