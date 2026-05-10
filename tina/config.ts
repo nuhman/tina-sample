@@ -35,7 +35,7 @@ export default defineConfig({
         match: { include: "home" },
         ui: {
           allowedActions: { create: false, delete: false },
-          router: () => "/",
+          //router: () => "/",
         },
         fields: [
           {
@@ -263,7 +263,7 @@ export default defineConfig({
         match: { include: "about" },
         ui: {
           allowedActions: { create: false, delete: false },
-          router: () => "/aboutus",
+          //router: () => "/aboutus",
         },
         fields: [
           {

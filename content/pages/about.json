@@ -3,7 +3,7 @@
   "seoDescription": "Meet the team behind Ethereal, learn our story, and discover the values that guide everything we build.",
   "hero": {
     "sectionLabel": "Our Story",
-    "title": "We're on a mission to make",
+    "title": "We're on a mission to CRAFT",
     "titleHighlight": "great software feel effortless.",
     "subtitle": "Ethereal was born from a simple frustration: too many tools, too little flow. We set out to build one platform that unifies the entire creative and engineering workflow — and we're just getting started."
   },
@@ -14,9 +14,21 @@
     "body2": "They left to build something better: a single, cohesive workspace where design, engineering, and product could collaborate in real time without the overhead. Two years later, over 50,000 teams around the world agree they were onto something.",
     "buttonText": "Meet the team",
     "cards": [
-      { "icon": "🏗️", "text": "Founded in San Francisco", "year": "2021" },
-      { "icon": "🌍", "text": "Teams in 60+ countries", "year": "2026" },
-      { "icon": "❤️", "text": "4.9★ customer satisfaction", "year": "All time" }
+      {
+        "icon": "🏗️",
+        "text": "Founded in San Francisco",
+        "year": "2021"
+      },
+      {
+        "icon": "🌍",
+        "text": "Teams in 60+ countries",
+        "year": "2026"
+      },
+      {
+        "icon": "❤️",
+        "text": "4.9★ customer satisfaction",
+        "year": "All time"
+      }
     ]
   },
   "values": {
@@ -51,12 +63,36 @@
     "title": "How we got here",
     "subtitle": "Five years of building, learning, and growing — one milestone at a time.",
     "milestones": [
-      { "year": "2021", "event": "Founded", "detail": "Elena and Jordan quit their jobs to build the tools they always wished existed." },
-      { "year": "2022", "event": "Seed Round", "detail": "Raised $4M to grow the team and launch a private beta with 200 design partners." },
-      { "year": "2023", "event": "Public Launch", "detail": "Opened to the world. 10,000 teams signed up in the first month." },
-      { "year": "2024", "event": "Series A", "detail": "Raised $22M. Expanded to Europe and APAC. Hit 25,000 paying teams." },
-      { "year": "2025", "event": "AI Platform", "detail": "Launched AI-powered workflows. Named a Top 10 Product of the Year by Product Hunt." },
-      { "year": "2026", "event": "Now", "detail": "50,000+ teams worldwide. Still day one in our minds." }
+      {
+        "year": "2021",
+        "event": "Founded",
+        "detail": "Elena and Jordan quit their jobs to build the tools they always wished existed."
+      },
+      {
+        "year": "2022",
+        "event": "Seed Round",
+        "detail": "Raised $4M to grow the team and launch a private beta with 200 design partners."
+      },
+      {
+        "year": "2023",
+        "event": "Public Launch",
+        "detail": "Opened to the world. 10,000 teams signed up in the first month."
+      },
+      {
+        "year": "2024",
+        "event": "Series A",
+        "detail": "Raised $22M. Expanded to Europe and APAC. Hit 25,000 paying teams."
+      },
+      {
+        "year": "2025",
+        "event": "AI Platform",
+        "detail": "Launched AI-powered workflows. Named a Top 10 Product of the Year by Product Hunt."
+      },
+      {
+        "year": "2026",
+        "event": "Now",
+        "detail": "50,000+ teams worldwide. Still day one in our minds."
+      }
     ]
   },
   "team": {
@@ -115,12 +151,30 @@
     "primaryButtonText": "View Open Roles",
     "secondaryButtonText": "Back to Home",
     "perks": [
-      { "icon": "🌐", "perk": "Fully remote" },
-      { "icon": "💰", "perk": "Competitive salary & equity" },
-      { "icon": "🏖️", "perk": "Unlimited PTO" },
-      { "icon": "📚", "perk": "$2K learning budget / year" },
-      { "icon": "💻", "perk": "Top-of-the-line equipment" },
-      { "icon": "🤝", "perk": "Inclusive, kind culture" }
+      {
+        "icon": "🌐",
+        "perk": "Fully remote"
+      },
+      {
+        "icon": "💰",
+        "perk": "Competitive salary & equity"
+      },
+      {
+        "icon": "🏖️",
+        "perk": "Unlimited PTO"
+      },
+      {
+        "icon": "📚",
+        "perk": "$2K learning budget / year"
+      },
+      {
+        "icon": "💻",
+        "perk": "Top-of-the-line equipment"
+      },
+      {
+        "icon": "🤝",
+        "perk": "Inclusive, kind culture"
+      }
     ]
   }
 }
